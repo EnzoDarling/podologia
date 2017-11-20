@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        <a href="/pacientes" class="btn btn-default"> < Volver</a>
+        <h2 class="page-header">{{paciente.apellido}} {{paciente.nombre}}</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Telefono/Celular: {{paciente.telefono}}</li>
+            <li class="list-group-item">Apellido: {{paciente.apellido}}</li>
+            <li class="list-group-item">Nombre: {{paciente.nombre}}</li>
+            <li class="list-group-item">Domicilio: {{paciente.domicilio}}</li>
+    {% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+    <div class="form-wrapper">
+        <a href="/turnos" class="btn btn-default"> < Volver</a>
+        <h2 class="page-header">{{turno.turnApellido}} {{turno.turnNombre}}</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Telefono/Celular: {{turno.turnTelefono}}</li>
+            <li class="list-group-item">Apellido: {{turno.turnApellido}}</li>    
+            <li class="list-group-item">Nombre: {{turno.turnNombre}}</li>
+            <li class="list-group-item">Fecha del Turno: {{turno.turnFecha|date('d/m/y H:i')}}</li>
+            <li class="list-group-item">Direccion: {{turno.turnDireccion}}</li>
+    </div>
+    {% endblock %}

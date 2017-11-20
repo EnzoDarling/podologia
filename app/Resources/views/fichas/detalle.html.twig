@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        <a href="/fichas" class="btn btn-default">< Volver</a>
+        <h2 class="page-header">{{ficha.fichaApellido}} {{ficha.fichaNombre}}</h2>
+        <ul class="list-group">
+        	<li class="list-group-item">Apellido: {{ficha.fichaApellido}}</li>
+        	<li class="list-group-item">Nombre: {{ficha.fichaNombre}}</li>
+        	<li class="list-group-item">Edad: {{ficha.fichaEdad}}</li>
+        	<li class="list-group-item">Direccion: {{ficha.fichaDireccion}}</li>
+        	<li class="list-group-item">Apellido: {{ficha.fichaApellido}}</li>
+        	<li class="list-group-item">Hiperhidrosis: {{ficha.fichaHiperhidro}}</li>
+        	<li class="list-group-item">Micosis: {{ficha.fichaMicosis}}</li>
+        	<li class="list-group-item">Anticuagulado: {{ficha.fichaAnticua}}</li>
+        	<li class="list-group-item">DBT: {{ficha.fichaDbt}}</li>
+        	<li class="list-group-item">Onicocriptosis: {{ficha.fichaOnicocri}}</li>
+        	<li class="list-group-item">Edema: {{ficha.fichaEdema}}</li>
+        	<li class="list-group-item">Talon Agrietado: {{ficha.fichaTalon}}</li>
+        	<li class="list-group-item">Afecciones Cardíacas: {{ficha.fichaAfecciones}}</li>
+        	<li class="list-group-item">Hiperqueratosis: {{ficha.fichaHiperquera}}</li>
+    {% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        <div class="FormWrapper">
+            <div class="row">
+                <div class="col-md-12">        
+                    <h2 class="page-header">Fichas Médicas</h2>
+                    <table class="table table-striped">
+                        <div class="input-group">    
+                            <input type="text" class="form-control" placeholder="Buscar"><span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">Buscar!</button>
+                            </span>
+                        </div>
+                        <thead>
+                            <tr>                    
+                                <th>Apellido</th>
+                                <th>Nombre</th>
+                                <th>Anticuagulado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for ficha in ficha %}
+                                <tr>
+                                    <th scope="row">{{ficha.fichaApellido}}</th>
+                                    <td>{{ficha.fichaNombre}}</td>
+                                    <td>{{ficha.fichaAnticua}}</td>
+                                    <td class='actionBotons'>
+                                        <a href="/fichas/detalle/1" class="btn btn-success"><i class="fa fa-eye"></i></a>
+                                        <a href="/fichas/editar/1" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                        <a href="/fichas/eliminar/1" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                    </td>                                    
+                                    <tr class="mfView">
+                                        <td class="mfBtns">
+                                            <a href="/fichas/detalle/1" class="btn btn-success"><i class="fa fa-eye"></i></a>                                            
+                                        </td>
+                                        <td class="mfBtns">
+                                            <a href="/fichas/editar/1" class="btn btn-default"><i class="fa fa-pencil"></i></a>                                            
+                                        </td>
+                                        <td class="mfBtns">
+                                            <a href="/fichas/eliminar/1" class="btn btn-danger"><i class="fa fa-trash"></i></a>                                            
+                                        </td>
+                                    </tr>                                    
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <a href="/fichas/crear" class="btn btn-primary"><i class="fa fa-plus"></i> Nueva Ficha</a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

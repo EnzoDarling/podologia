@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        <a href="/vademecum" class="btn btn-default">< Volver</a>
+        <h2 class="page-header">{{vademecum.vadeNombre}}</h2>
+        <ul class="list-group">
+        	<li class="list-group-item">Nombre: {{vademecum.vadeNombre}}</li>
+        	<li class="list-group-item">Posología: {{vademecum.vadePosologia}}</li>
+        	<li class="list-group-item">Indicaciones: {{vademecum.vadeIndicacion}}</li>
+    {% endblock %}

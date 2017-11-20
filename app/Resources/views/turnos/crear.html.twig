@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        <div class='form-wrapper'>
+            <a href="/turnos" class="btn btn-default">< Volver</a>
+            <h2 class="page-header">Crear Turno</h2>
+            {{form_start(form)}}
+            {{form_widget(form)}}
+            {{form_end(form)}}
+        </div>
+    {% endblock %}
