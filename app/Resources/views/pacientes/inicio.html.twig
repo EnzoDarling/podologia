@@ -1,48 +1,48 @@
 {% extends 'base.html.twig' %}
-    {% block body %}
-        <div class="FormWrapper">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="page-header">Pacientes</h2>
-                    <a href="/pacientes/crear" class="btn btn-primary"><i class="fa fa-plus"></i> Nuevo Paciente</a>
-                    <table class="table table-striped">
-                        <div class="input-group">                            
-                            </span>
-                        </div>
-                        <thead>
-                            <tr>
-                                <th>Tel/Cel</th>
-                                <th>Apellido</th>
-                                <th>Nombre</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for paciente in paciente %}
-                            <tr>
-                                <th scope="row">{{paciente.telefono}}</th>
-                                <td>{{paciente.apellido}}</td>
-                                <td>{{paciente.nombre}}</td>
-                                <td class='actionBotons'>
-                                    <a href="/pacientes/detalles/{{paciente.id}}" class="btn btn-success"><i class="fa fa-eye"></i></a>
-                                    <a href="/pacientes/editar/{{paciente.id}}" class="btn btn-default"><i class="fa fa-pencil"></i></a>
-                                    <a href="/pacientes/eliminar/{{paciente.id}}" class="btn btn-danger" onclick="return confirm('Esta seguro de que quiere eliminar?')"><i class="fa fa-trash"></i></a>
-                                </td>
-                                <tr class="mfView">
-                                    <td class="mfBtns">
-                                        <a href="/pacientes/detalles/{{paciente.id}}" class="btn btn-success"><i class="fa fa-eye"></i></a>                                        
-                                    </td>
-                                    <td class="mfBtns">
-                                        <a href="/pacientes/editar/{{paciente.id}}" class="btn btn-default"><i class="fa fa-pencil"></i></a>                                        
-                                    </td>
-                                    <td class="mfBtns">
-                                        <a href="/pacientes/eliminar/{{paciente.id}}" class="btn btn-danger" onclick="return confirm('Esta seguro de que quiere eliminar?')"><i class="fa fa-trash"></i></a>
-                                    </td>
-                                </tr>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>                        
-                </div>
-            </div>
-        </div>
-    {% endblock %}
+	{% block body %}
+		<div class="FormWrapper">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="page-header">Pacientes</h2>
+					<a href="/pacientes/crear" class="btn btn-primary"><i class="fa fa-plus"></i> Nuevo Paciente</a>
+					<table class="table table-striped">
+						<div class="input-group">                            
+								</span>
+						</div>
+						<thead>
+								<tr>
+										<th>Tel/Cel</th>
+										<th>Apellido</th>
+										<th>Nombre</th>
+								</tr>
+						</thead>
+						<tbody>
+							{% for paciente in paciente %}
+							<tr>
+								<th scope="row">{{paciente.telefono}}</th>
+								<td>{{paciente.apellido}}</td>
+								<td>{{paciente.nombre}}</td>
+								<td class='actionBotons'>
+									<a href="/pacientes/detalles/{{paciente.id}}" class="btn btn-success"><i class="fa fa-eye"></i></a>
+									<a href="/pacientes/editar/{{paciente.id}}" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+									<a href="/pacientes/eliminar/{{paciente.id}}" class="btn btn-danger" onclick="return confirm('Esta seguro de que quiere eliminar?')"><i class="fa fa-trash"></i></a>
+								</td>
+								<tr class="mfView">
+									<td class="mfBtns">
+											<a href="/pacientes/detalles/{{paciente.id}}" class="btn btn-success"><i class="fa fa-eye"></i></a>                                        
+									</td>
+									<td class="mfBtns">
+											<a href="/pacientes/editar/{{paciente.id}}" class="btn btn-default"><i class="fa fa-pencil"></i></a>                                        
+									</td>
+									<td class="mfBtns">
+											<a href="/pacientes/eliminar/{{paciente.id}}" class="btn btn-danger" onclick="return confirm('Esta seguro de que quiere eliminar?')"><i class="fa fa-trash"></i></a>
+									</td>
+								</tr>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>                        
+				</div>
+			</div>
+		</div>
+	{% endblock %}

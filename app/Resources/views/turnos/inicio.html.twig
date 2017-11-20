@@ -1,50 +1,50 @@
 {% extends 'base.html.twig' %}
-    {% block body %}
-        <div class="FormWrapper">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="page-header">Turnos</h2>
-                    <table class="table table-striped">
-                        <div class="input-group">                            
-                            </span>
-                        </div>
-                        <thead>
-                            <tr>
-                                <th>Tel/Cel</th>
-                                <th>Apellido</th>
-                                <th>Nombre</th>
-                                <th>Fecha</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for turno in turno %}
-                            <tr>
-                                <th scope="row">{{turno.turnTelefono}}</th>
-                                <td>{{turno.turnApellido}}</td>
-                                <td>{{turno.turnNombre}}</td>
-                                <td>{{turno.turnFecha|date('d/m/y H:i:s')}}</td>                               
-                                <td class='actionBotons'>
-                                    <a href="/turnos/detalle/{{turno.id}}" class="btn btn-success"><i class="fa fa-eye"></i></a>
-                                    <a href="/turnos/editar/{{turno.id}}" class="btn btn-default"><i class="fa fa-pencil"></i></a>
-                                    <a href="/turnos/eliminar/{{turno.id}}" class="btn btn-danger" onclick="return confirm('Esta seguro de que quiere eliminar?')"><i class="fa fa-trash"></i></a>
-                                </td>
-                                <tr class="mfView">
-                                    <td class="mfBtns">
-                                        <a href="/turnos/detalle/{{turno.id}}" class="btn btn-success"><i class="fa fa-eye"></i></a>
-                                    </td>
-                                    <td class="mfBtns">
-                                        <a href="/turnos/editar/{{turno.id}}" class="btn btn-default"><i class="fa fa-pencil"></i></a>
-                                    </td>
-                                    <td class="mfBtns">
-                                        <a href="/turnos/eliminar/{{turno.id}}" class="btn btn-danger" onclick="return confirm('Esta seguro de que quiere eliminar?')"><i class="fa fa-trash"></i></a>
-                                    </td>
-                                </tr>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                    <a href="/turnos/crear" class="btn btn-primary"><i class="fa fa-plus"></i> Nuevo Turno</a>
-                </div>
-            </div>
-        </div>
-    {% endblock %}
+	{% block body %}
+		<div class="FormWrapper">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="page-header">Turnos</h2>
+					<table class="table table-striped">
+						<div class="input-group">                            
+								</span>
+						</div>
+						<thead>
+								<tr>
+										<th>Tel/Cel</th>
+										<th>Apellido</th>
+										<th>Nombre</th>
+										<th>Fecha</th>
+								</tr>
+						</thead>
+						<tbody>
+							{% for turno in turno %}
+							<tr>
+								<th scope="row">{{turno.turnTelefono}}</th>
+								<td>{{turno.turnApellido}}</td>
+								<td>{{turno.turnNombre}}</td>
+								<td>{{turno.turnFecha|date('d/m/y H:i:s')}}</td>                               
+								<td class='actionBotons'>
+									<a href="/turnos/detalle/{{turno.id}}" class="btn btn-success"><i class="fa fa-eye"></i></a>
+									<a href="/turnos/editar/{{turno.id}}" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+									<a href="/turnos/eliminar/{{turno.id}}" class="btn btn-danger" onclick="return confirm('Esta seguro de que quiere eliminar?')"><i class="fa fa-trash"></i></a>
+								</td>
+								<tr class="mfView">
+									<td class="mfBtns">
+											<a href="/turnos/detalle/{{turno.id}}" class="btn btn-success"><i class="fa fa-eye"></i></a>
+									</td>
+									<td class="mfBtns">
+											<a href="/turnos/editar/{{turno.id}}" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+									</td>
+									<td class="mfBtns">
+											<a href="/turnos/eliminar/{{turno.id}}" class="btn btn-danger" onclick="return confirm('Esta seguro de que quiere eliminar?')"><i class="fa fa-trash"></i></a>
+									</td>
+								</tr>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					<a href="/turnos/crear" class="btn btn-primary"><i class="fa fa-plus"></i> Nuevo Turno</a>
+				</div>
+			</div>
+		</div>
+	{% endblock %}
