@@ -4,16 +4,16 @@ Este sistema esta fue desarrollado en Symfony, MySql (Lamp stack en Linux) y Boo
 
 Requerimientos
 ----------------
-*PHP v5.5.9 o superior
-*PDO-SQLite PHP extensiones habilitadas
-*Doctrine v1.6
-*Symfony Assetic Bundle v2.8
-*Y los requerimientos usuales de Symfony
+* PHP v5.5.9 o superior
+* PDO-SQLite PHP extensiones habilitadas
+* Doctrine v1.6
+* Symfony Assetic Bundle v2.8
+* Y los requerimientos usuales de Symfony
 
 Instalación
 -----------
-1.Clonar repo
-2.Ejecutar ```php bin/vendors install``` para instalar los requerimientos de vendors
-3.Instalar assets con ```composer require symfony/assetic-bundle```
-4.Crear la base de datos con ```php app/console doctrine:database:create```
-5.Actualizar schema con ```php app/console doctrine:schema:create```
+1. Clonar repo
+2. Ejecutar ```php bin/vendors install``` para instalar los requerimientos de vendors
+3. Instalar assets con ```composer require symfony/assetic-bundle```
+4. Crear la base de datos con ```php app/console doctrine:database:create```
+5. Actualizar schema con ```php app/console doctrine:schema:create```
