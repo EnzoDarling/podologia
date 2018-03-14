@@ -9,35 +9,24 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
     <title>{% block title %}Podologia{% endblock %}</title>    
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     {% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
       <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
   </head>
-  <body>
-    <nav class="navbar navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Podologia</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">            
-            <li><a href="/pacientes">Pacientes</a></li>
-            <li><a href="/vademecum">Vademecum</a></li>
-            <li><a href="/turnos">Turnos</a></li>
-            <li><a href="/fichas">Fichas Médicas</a></li>            
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>    
+  <body>    
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Sandra S.C</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="/pacientes">Pacientes</a>
+        <a class="p-2 text-dark" href="/vademecum">Vademecum</a>
+        <a class="p-2 text-dark" href="/turnos">Turnos</a>
+        <a class="p-2 text-dark" href="/fichas">Fichas Médicas</a>
+      </nav>
+      <a class="btn btn-outline-primary" href="/login">Entrar</a>
+    </div>    
     <div>      
       {% if app.session.flashbag.has('error')%}
         {% for flash_message in app.session.flashbag.get('error')%}
