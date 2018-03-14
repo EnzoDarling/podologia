@@ -3,13 +3,17 @@
 	use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 	use Symfony\Component\HttpFoundation\Request;
 	use Symfony\Component\Routing\Annotation\Route;
-	
-
+	use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 	class SecurityController extends Controller{
 		/**
 			*@Route("/login", name="Login")
 			*/
-		public function loginAction(Request $request){
-
+		public function loginAction(Request $request, AuthenticationUtils $authenticationUtils){
+			$error = $authenticationUtils->getLastAuthenticationError();
+			$lastUsername = $authenticationUtils->getLastUserName();
+			return $this->render('seguridad/login.html.twig', array(
+				'last_username' => $lastUsername,
+				'error' => $error,
+			));
 		}
 	}
