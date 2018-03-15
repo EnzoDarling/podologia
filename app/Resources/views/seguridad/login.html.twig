@@ -1,12 +1,21 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-	<div class="container">
+	<div class="container text-center">
 		<h1>Entrar</h1>
-		<div class="form-group">
-			<label for="inputUsername">Usuario</label>
-			<input type="text" class="form-control" id="inputUserName" placeholder="Ingrese su usuario"/>
-			<label for="inputPassword">Contraseña</label>
-			<input type="password" class="form-control" id="InputPassword1" placeholder="Password" />
-		</div>
+		{% if error %}
+			<div class="alert alert-danger" role="alert">{{ error.messageKey|trans(error.messageData, 'security') }}
+		{% endif %}
+		<form class="form-signin" action="{{ path('login')}}" method="post">
+			<label for="username">Usuario</label>
+			<input type="text" id="username" name="_username" value="{{ last_username}}" required autofocus style="width:100px" />
+			<label for="password">Contraseña</label>
+			<input class="form-control" type="password" id="password" name="_password" required />
+			{#
+        If you want to control the URL the user
+        is redirected to on success (more details below)
+        <input type="hidden" name="_target_path" value="/account" />
+    	#}
+    	<button class="btn btn-primary m-5" type="submit">Entrar</button>
+		</form>
 	</div>
 {% endblock %}

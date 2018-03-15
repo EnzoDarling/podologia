@@ -6,7 +6,7 @@
 	use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 	class SecurityController extends Controller{
 		/**
-			*@Route("/login", name="Login")
+			*@Route("/login", name="login")
 			*/
 		public function loginAction(Request $request, AuthenticationUtils $authenticationUtils){
 			$error = $authenticationUtils->getLastAuthenticationError();

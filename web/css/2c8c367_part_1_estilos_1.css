@@ -1,32 +1,14 @@
-/* Estilos Principales*/
 body{
 	margin: 0;
-	padding: 0;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 1.5em;
-	line-height: 1.5;
-	text-align: center;
 }
-img{
-	display: block;
-	width: 100%;
-	height: auto;
-}
-h1,h2,h3{
-	margin: 0;
-	padding: 1em 0;
-}
-p{
-	margin: 0;
-	padding: 1em 0;
-}
-#Header{
+.Header{
 	min-height: 450px;
-	margin: 0;
-	color: #fff;
+}
+.BgHeader{
 	text-align: center;
 }
-#Header .headerImg{
+.headerImg{
 	position: absolute;
 	background: linear-gradient(rgba(59,134,134,0.6),rgba(59,134,134,0.6)), url("../bundles/app/images/massage.jpg");
 	background-position: center;
@@ -36,33 +18,20 @@ p{
 	height: 450px;
 	z-index: -1;	
 }
-#Header h1{
-	padding-top: 160px;
-	padding-bottom: 0;
-	font-weight: 600;
-	text-align: center;	
-}
-#Header h3{
-	padding: 10px;
-	padding-bottom: 0;
-}
-#Header .content-wrap{
-	padding: 0 1.5em;
-}
 .Header-content{
 	margin: 0;
 	color: #fff;
-	padding-top: 100px;
+	padding-top: 200px;
 	font-weight: 600;
 	z-index: 1;
 }
 .Header-content h1{
 	font-weight: 600;
-	text-shadow: 2px 2px 3px #0B486B;
+	text-shadow: 2px 2px 3px #0B486B;	
 }
 .navbar{
 	margin: 0;
-	position: relative;
+	position: absolute;
 	width: 100%;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -76,134 +45,22 @@ p{
 	opacity: 0.85;
 	z-index: 1;
 }
-#main-contenido{
-	margin: 0;
-	padding: 0;
+.Info-masajes{
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 2em;
 }
-#Info-masajes{
+.Servicios{
 	background: #F6F6F6;
 	text-align: center;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	margin: 0;
 }
-.Info-contenido{
-	margin: 0;
-	padding: 0;
-}
-.Info-titulo{
-	margin: 0px;
-	padding: 0px;
-}
-#Servicios{
-	background: #333333;
-	padding: 2em 1em 1em;
-	text-align: center;
-}
-#Servicios ul{
-	list-style: none;
-	padding: 0;
-	margin: 0;	
-}
-#Servicios li{
-	margin-bottom: 1em;
-	background: #fff;
-	color: #333;
-}
-#Servicios .card-content{
-	padding: 1em;
-}
-.card-img1{
-	background: url('../bundles/app/images/backmassage.jpg');	
-}
-.card-img2{
-	background: url('../bundles/app/images/towell.jpg');
-}
-.card-img3{
-	background: url('../bundles/app/images/stonemassage.jpg');
-}
-.card-img1, .card-img2, .card-img3{
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	height: 200px;	
-}
-#Servicios .card-title{
-	font-size: 1.4em;
-}
-#Personal .box{
-	color: #F6F6F6;	
-	padding: 1.5em;
-	margin: 0;
-}
-#Personal .box:first-child{
-	background: #45ADA8;
-}
-#Personal .box:last-child{
-	background: #F6F6F6;
-	color: #333;
-}
-#main-footer{
-	padding: 2em;
-	background: #333333;
-	color: #F6F6F6;
-	text-align: center;
-}
-#main-footer a{
-	text-decoration: none;
-	color: #45ADA8;
+.card{
+	background: #594F4F;
 }
 .FormWrapper{
 	padding-right: 15px;
 	padding-left: 15px;
-	padding-top: 30px;	
+	padding-top: 100px;	
 	margin-left: auto;
 	margin-right: auto;
-}
-.form-wrapper{
-	margin-left: 40px;
-	margin-right: 40px;
-}
-.mfView .mfBotons{
-	display: none;
-}
-@media (min-width: 700px){
-	.grid{
-		display: grid;
-		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-	}
-	#Info-masajes .Info-texto{
-		columns: 2;
-		column-gap: 2em;
-	}
-	#Info-masajes .Info-texto p{
-		padding-top: 0;
-	}
-	.content-wrap, #Servicios ul{
-		grid-column: 2/4;
-	}
-	.box, #main-footer div{
-		grid-column: span 2;
-	}
-	
-	#Servicios ul{
-		display: flex;
-		justify-content: space-around;
-	}
-	#Servicios li{
-		width: 31%;		
-	}
-}
-@media (max-width: 570px){
-	.actionBotons{
-		display: none;
-	}
-	.mfView .mfBotons{
-		display: flex;				
-	}
-	.mfView .btn{
-		padding: 10px 15px;
-		margin-right: 30px;
-	}
 }
