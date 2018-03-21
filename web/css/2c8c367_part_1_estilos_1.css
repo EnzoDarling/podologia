@@ -64,3 +64,6 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 }
+.form-control{
+	margin: 0 auto;
+}
