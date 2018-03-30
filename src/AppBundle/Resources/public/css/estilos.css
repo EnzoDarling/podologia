@@ -2,8 +2,19 @@ body{
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 }
-.Header{
+#Header{
 	min-height: 450px;
+}
+.HeaderContent{
+	background-color: rgba(255,255,255,0.5);
+	height: 200px;
+	margin: 0 auto;
+	top: 100px;
+	text-align: center;
+	border-radius: 10px;
+}
+.HeaderContent h1, .HeaderContent h3{
+	padding: 15px;
 }
 .BgHeader{
 	text-align: center;
@@ -18,8 +29,16 @@ body{
 	height: 450px;
 	z-index: -1;	
 }
+.content-wrap{
+	height: 100vh;
+}
+.content-wrap h1{
+	padding-top: auto;
+}
 .Header-content{
+	height: 100%;
 	margin: 0;
+	position: relative;
 	color: #fff;
 	padding-top: 200px;
 	font-weight: 600;
@@ -35,6 +54,9 @@ body{
 	width: 100%;
 	text-transform: uppercase;
 	font-weight: 700;
+}
+.navContent a{
+	text-decoration: none;
 }
 .BgHeader{
 	z-index: -1;

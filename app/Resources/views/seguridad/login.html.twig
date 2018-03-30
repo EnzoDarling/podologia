@@ -3,7 +3,7 @@
 	<div class="container text-center">
 		<h1>Entrar</h1>
 		{% if error %}
-			<div class="alert alert-danger" role="alert">{{ error.messageKey|trans(error.messageData, 'security') }}
+			<div role="alert">{{ error.messageKey|trans(error.messageData, 'security') }}
 		{% endif %}
 		<form class="form-group" action="{{ path('login')}}" method="post">
 			<label for="username">Usuario</label>
