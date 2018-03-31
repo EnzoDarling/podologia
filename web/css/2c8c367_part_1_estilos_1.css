@@ -114,3 +114,11 @@ body{
 .form-control{
 	margin: 0 auto;
 }
+#Personal{
+	display: flex;
+}
+.Contacto-content, .About-content{
+	background-color: #fff;
+	flex-basis: 50%;
+	text-align: center;
+}
