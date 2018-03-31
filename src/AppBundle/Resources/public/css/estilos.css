@@ -121,4 +121,14 @@ body{
 	background-color: #fff;
 	flex-basis: 50%;
 	text-align: center;
+	padding: 70px 0px
+}
+.Footer{
+	background-color: #1B1B1E;
+	color: #fff;
+	text-align: center;
+}
+.Footer p{
+	padding: 40px;
+	margin: 0px;
 }
