@@ -78,12 +78,16 @@ body{
 	padding-top: 30px;
 	line-height: 40px;
 }
-.Servicios{
-	background: #F6F6F6;
-	text-align: center;
+#Servicios{
+	background-color: rgba(59,134,134,0.9);
+}
+#Servicios h1{
+	color: #ffffff;
+	font-weight: 600;
+	padding: 40px;
 }
 .card{
-	background: #594F4F;
+	background: #ffffff;
 }
 .card-img1{
 	background-image: url("../images/towell.jpg");
