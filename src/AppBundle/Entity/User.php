@@ -3,13 +3,14 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * User
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  */
-class User
+class User implements UserInterface
 {
     /**
      * @var int
@@ -123,5 +124,16 @@ class User
     {
         return $this->password;
     }
+
+    //Metodos que debe implementar el Entity por UserInterface
+    public function getSalt(){
+        // The bcrypt algorithm doesn't require a separate salt.
+        // You "may" need a real salt if you choose a different encoder.
+        return null;
+    }
+    public function getRoles(){
+        return array('ROLE_USER');
+    }
+    public function eraseCredentials(){}
 }
 

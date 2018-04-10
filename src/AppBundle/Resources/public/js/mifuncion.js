@@ -1,4 +1,3 @@
-function alerta() {
-	console.log("prueba");
-}
-alerta();
+$(document).ready(function () {
+	$(".userInput").reset();
+});
