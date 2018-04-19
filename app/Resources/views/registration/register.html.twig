@@ -1,7 +1,11 @@
-{{ form_start(form) }}
-	{{ form_now(form.username) }}
-	{{ form_now(form.email) }}
-	{{ form_now(form.plainPassword.first) }}
-	{{ form_now(form.plainPassword.second) }}
-	<button type="submit">Registrarse</button>
-{{ form_end(form)}}
+{% extends 'base.html.twig' %}
+	{% block body %}
+		<a href="/" class="btn btn-default">< Volver</a>
+    <h2 class="page-header">Registro</h2>
+		{{ form_start(form) }}
+			{{ form_row(form.username) }}
+			{{ form_row(form.email) }}
+			{{ form_row(form.password) }}
+			<button type="submit">Registrarse</button>
+		{{ form_end(form)}}
+	{% endblock %}

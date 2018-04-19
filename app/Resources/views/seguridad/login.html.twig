@@ -7,21 +7,21 @@
 		{% endif %}
 		<form class="form-group text-center" action="{{ path('login')}}" method="post">
 			<div class="row justify-content-center">
-				<label class="userLabel" for="username">Usuario</label>
+				<label class="userLabel pl-3 pr-3" for="username">Usuario</label>
 				<input type="text" class="form-control userInput ml-5 mr-5" id="username" name="
 				_username" 
-					required autofocus style="width: 30%" placeholder="Ingrese su usuario" />
+					required autofocus style="width: 25%"/>
 			</div>
 			<div class="row py-5 justify-content-center">
 				<label class="passLabel pl-1 pr-1" for="password">Contraseña</label>
-				<input class="form-control passInput ml-4 mr-4" type="password" id="password" name="_password" required style="width: 25%"/>
+				<input class="form-control passInput ml-5 mr-5" type="password" id="password" name="_password" required style="width: 25%"/>
 				{#
 	        If you want to control the URL the user
 	        is redirected to on success (more details below)
 	        <input type="hidden" name="_target_path" value="/account" />
 	    	#}
 	    </div>
-	    <button class="btn btn-primary m-5" type="submit">Entrar</button>
+	    <button class="btn btn-primary m-5 pr-4 pl-4" type="submit">Entrar</button>
 		</form>
 	</div>
 {% endblock %}
