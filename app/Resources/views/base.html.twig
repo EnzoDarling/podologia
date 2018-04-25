@@ -25,6 +25,9 @@
         <a class="p-2 text-dark" href="/turnos">Turnos</a>
         <a class="p-2 text-dark" href="/fichas">Fichas Médicas</a>
       </nav>
+      {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <a href="{{ logout_path() }}" class="btn btn-danger">Salir</a>
+      {% endif %}
       <a class="btn btn-outline-primary" href="/login">Entrar</a>
     </div>    
     <div>      

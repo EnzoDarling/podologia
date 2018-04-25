@@ -16,4 +16,10 @@
 				'error' => $error,
 			));
 		}
+		/**
+		 * @Route("/logout", name="logout")
+		*/
+		public function logoutAction(){
+
+		}
 	}

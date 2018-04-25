@@ -23,14 +23,12 @@ class RegistrationController extends Controller
     		$form->handleRequest($request);
     		if($form->isSubmitted() && $form->isValid()){
     			//Codificar la contraseña
-    			$password = $passwordEncoder->encodePassword($user, $user->getPassword());
-    			$user->setPassword($password);
-
+    			$user->setPassword($passwordEncoder->encodePassword($user, $user->getPassword()));
     			//Guardar el usuario
     			$entityManager = $this->getDoctrine()->getManager();
     			$entityManager->persist($user);
     			$entityManager->flush();
-			    return $this->redirectToRoute('homepage');
+			    return $this->redirectToRoute('login');
     		}
     return $this->render('registration/register.html.twig', array('form'=>$form->createView())
   	);

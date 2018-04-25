@@ -3,7 +3,7 @@
 	<div class="container text-center mt-5">
 		<h1>Entrar</h1>
 		{% if error %}
-			<div role="alert">{{ error.messageKey|trans(error.messageData, 'security') }}
+			<div role="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}
 		{% endif %}
 		<form class="form-group text-center" action="{{ path('login')}}" method="post">
 			<div class="row justify-content-center">
@@ -21,7 +21,7 @@
 	        <input type="hidden" name="_target_path" value="/account" />
 	    	#}
 	    </div>
-	    <button class="btn btn-primary m-5 pr-4 pl-4" type="submit">Entrar</button>
+	    <button class="btn btn-primary m-5 pr-4 pl-4" type="submit">Entrar</button> 
 		</form>
 	</div>
 {% endblock %}
