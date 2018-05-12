@@ -90,13 +90,13 @@ body{
 	background: #ffffff;
 }
 .card-img1{
-	background-image: url("../bundles/app/images/towell.jpg");
+	background-image: url("../bundles/app/images/cardimg1.jpeg");
 }
 .card-img2{
-	background-image: url("../bundles/app/images/backmassage.jpg");
+	background-image: url("../bundles/app/images/cardimg2.jpeg");
 }
 .card-img3{
-	background-image: url("../bundles/app/images/stonemassage.jpg");
+	background-image: url("../bundles/app/images/cardimg3.jpg");
 }
 .cardItem{
 	background-size: cover;
